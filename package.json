@@ -1,0 +1,30 @@
+{
+  "name": "fresh-fuel",
+  "version": "1.0.0",
+  "description": "This is a web application to find & create Healthy Recipes!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WyattBensman/fresh-fuel.git"
+  },
+  "author": "Arnaldo Henriquez, Josue Feliciano, Jese Hernandez, Wyatt Bensman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WyattBensman/fresh-fuel/issues"
+  },
+  "homepage": "https://github.com/WyattBensman/fresh-fuel#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.32.1"
+  }
+}
