@@ -23,11 +23,6 @@ Food.init(
       type: DataTypes.JSON, // Use JSONB for storing an array of instructions
       allowNull: false,
     },
-    nutrition: {
-        type: DataTypes.JSON,
-        defaultValue: true, // Use JSONB for storing nutrition information
-        allowNull: true
-    }
 },
 {
     sequelize,

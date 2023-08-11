@@ -1,0 +1,13 @@
+{{#each foods as |food|}}
+<div>
+  <h1>{{food.food_name}}</h1>
+  <!--<p>{{food.ingredients}}</p>-->
+  {{#each food.ingredients}}
+  <p>{{@key}}. {{this}}</p>
+  {{/each}}
+
+  {{#each food.instructions}}
+  <p>{{@key}}. {{this}}</p>
+  {{/each}}
+</div>
+{{/each}}
