@@ -24,8 +24,9 @@ Food.init(
         allowNull: false
     },
     nutrition: {
-        type: DataTypes.JSON, // Use JSONB for storing nutrition information
-        allowNull: false
+        type: DataTypes.JSON,
+        defaultValue: true, // Use JSONB for storing nutrition information
+        allowNull: true
     }
 },
 {
