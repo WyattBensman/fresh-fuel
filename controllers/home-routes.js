@@ -22,6 +22,8 @@ router.get('/', async (req, res) => {
   }
 });
 
+
+
 router.post('/', (req, res) => {
     // Use Sequelize's `create()` method to add a row to the table
     // Similar to `INSERT INTO` in plain SQL
