@@ -1,4 +1,4 @@
-{{#each foods as |food|}}
+{{!-- {{#each foods as |food|}}
 <div>
   <h1>{{food.food_name}}</h1>
   <!--<p>{{food.ingredients}}</p>-->
@@ -11,4 +11,18 @@
   {{/each}}
 </div>
 
-{{/each}}
+{{/each}} --}}
+
+<main>
+  <div class="left-sidebar">
+    {{!-- Sidebar content goes here  --}}
+  </div>
+
+  <div class="grid-container">
+    <div class="row">
+      {{#each recipes as |recipe|}}
+      {{> recipe-card}}
+      {{/each}}
+    </div>
+  </div>
+  </main>
