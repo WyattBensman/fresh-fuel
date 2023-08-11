@@ -3,7 +3,7 @@ const { Food } = require("../models");
 const fooddata = [
   {
     id: 1,
-    name: "Grilled Chicken Salad",
+    food_name: "Grilled Chicken Salad",
     ingredients: [
       "Boneless, skinless chicken breasts",
       "Mixed salad greens",
@@ -19,7 +19,7 @@ const fooddata = [
   },
   {
     id: 2,
-    name: "Quinoa Stir-Fry",
+    food_name: "Quinoa Stir-Fry",
     ingredients: [
       "Quinoa",
       "Assorted vegetables (bell peppers, broccoli, carrots, snap peas, etc.)",
@@ -35,7 +35,7 @@ const fooddata = [
   },
   {
     id: 3,
-    name: "Greek Yogurt Parfait",
+    food_name: "Greek Yogurt Parfait",
     ingredients: [
       "Greek yogurt",
       "Mixed berries (strawberries, blueberries, raspberries)",
@@ -49,7 +49,7 @@ const fooddata = [
   },
   {
     id: 4,
-    name: "Oven-Roasted Vegetables",
+    food_name: "Oven-Roasted Vegetables",
     ingredients: [
       "Assorted vegetables (zucchini, bell peppers, carrots, broccoli, etc.)",
       "Olive oil",
@@ -62,7 +62,7 @@ const fooddata = [
   },
   {
     id: 5,
-    name: "Black Bean and Avocado Wrap",
+    food_name: "Black Bean and Avocado Wrap",
     ingredients: [
       "Whole wheat tortilla",
       "Canned black beans (rinsed and drained)",
@@ -79,7 +79,7 @@ const fooddata = [
   },
   {
     id: 6,
-    name: "Salmon and Asparagus Foil Pack",
+    food_name: "Salmon and Asparagus Foil Pack",
     ingredients: [
       "Salmon fillet",
       "Asparagus spears",
@@ -94,7 +94,7 @@ const fooddata = [
   },
   {
     id: 7,
-    name: "Mediterranean Chickpea Salad",
+    food_name: "Mediterranean Chickpea Salad",
     ingredients: [
       "Canned chickpeas (rinsed and drained)",
       "Cucumber",
@@ -113,7 +113,7 @@ const fooddata = [
   },
   {
     id: 8,
-    name: "Berry Spinach Smoothie",
+    food_name: "Berry Spinach Smoothie",
     ingredients: [
       "Fresh spinach leaves",
       "Mixed berries (strawberries, blueberries, raspberries)",
@@ -127,7 +127,7 @@ const fooddata = [
   },
   {
     id: 9,
-    name: "Veggie Omelette",
+    food_name: "Veggie Omelette",
     ingredients: [
       "Eggs",
       "Bell peppers (diced)",
@@ -143,7 +143,7 @@ const fooddata = [
   },
   {
     id: 10,
-    name: "Roasted Sweet Potato Fries",
+    food_name: "Roasted Sweet Potato Fries",
     ingredients: [
       "Sweet potatoes (peeled and cut into fries)",
       "Olive oil",
@@ -156,7 +156,7 @@ const fooddata = [
   },
   {
     id: 11,
-    name: "Berry Chia Pudding",
+    food_name: "Berry Chia Pudding",
     ingredients: [
       "Chia seeds",
       "Almond milk",
@@ -169,7 +169,7 @@ const fooddata = [
   },
   {
     id: 12,
-    name: "Turkey and Avocado Wrap",
+    food_name: "Turkey and Avocado Wrap",
     ingredients: [
       "Whole wheat tortilla",
       "Sliced turkey breast",
@@ -184,7 +184,7 @@ const fooddata = [
   },
   {
     id: 13,
-    name: "Cauliflower Fried Rice",
+    food_name: "Cauliflower Fried Rice",
     ingredients: [
       "Cauliflower (riced)",
       "Assorted vegetables (peas, carrots, corn, bell peppers)",
@@ -201,7 +201,7 @@ const fooddata = [
   },
   {
     id: 14,
-    name: "Peanut Butter Banana Smoothie",
+    food_name: "Peanut Butter Banana Smoothie",
     ingredients: [
       "Banana",
       "Natural peanut butter",
@@ -216,7 +216,7 @@ const fooddata = [
   },
   {
     id: 15,
-    name: "Rainbow Veggie Salad",
+    food_name: "Rainbow Veggie Salad",
     ingredients: [
       "Baby spinach",
       "Red bell pepper (sliced)",
@@ -233,7 +233,7 @@ const fooddata = [
   },
   {
     id: 16,
-    name: "Lentil and Vegetable Soup",
+    food_name: "Lentil and Vegetable Soup",
     ingredients: [
       "Brown lentils",
       "Assorted vegetables (carrots, celery, zucchini, etc.)",
@@ -249,7 +249,7 @@ const fooddata = [
   },
   {
     id: 17,
-    name: "Oatmeal with Berries and Almonds",
+    food_name: "Oatmeal with Berries and Almonds",
     ingredients: [
       "Old-fashioned oats",
       "Almond milk",
@@ -263,7 +263,7 @@ const fooddata = [
   },
   {
     id: 18,
-    name: "Veggie and Hummus Wrap",
+    food_name: "Veggie and Hummus Wrap",
     ingredients: [
       "Whole wheat tortilla",
       "Hummus",
@@ -280,7 +280,7 @@ const fooddata = [
   },
   {
     id: 19,
-    name: "Chickpea and Spinach Curry",
+    food_name: "Chickpea and Spinach Curry",
     ingredients: [
       "Canned chickpeas (rinsed and drained)",
       "Fresh spinach leaves",
@@ -298,7 +298,7 @@ const fooddata = [
   },
   {
     id: 20,
-    name: "Cucumber Avocado Gazpacho",
+    food_name: "Cucumber Avocado Gazpacho",
     ingredients: [
       "Cucumber (peeled and chopped)",
       "Avocado",
@@ -315,7 +315,7 @@ const fooddata = [
   },
   {
     id: 21,
-    name: "Veggie and Tofu Stir-Fry",
+    food_name: "Veggie and Tofu Stir-Fry",
     ingredients: [
       "Firm tofu (cubed)",
       "Assorted vegetables (broccoli, snap peas, bell peppers, etc.)",
@@ -331,7 +331,7 @@ const fooddata = [
   },
   {
     id: 22,
-    name: "Berry Quinoa Parfait",
+    food_name: "Berry Quinoa Parfait",
     ingredients: [
       "Cooked quinoa",
       "Mixed berries (strawberries, blueberries, raspberries)",
