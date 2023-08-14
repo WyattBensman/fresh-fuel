@@ -42,4 +42,25 @@ router.post('/', (req, res) => {
       });
   });
 
+  router.get('/login', (req,res) => {
+    try {
+      res.render('login');
+  } catch (error) {
+      console.error(error);
+      res.status(500).send('Error rendering Login');
+  }
+  })
+
+  router.get('/signup', (req, res) => {
+    try {
+      res.render('signup');
+  } catch (error) {
+      console.error(error);
+      res.status(500).send('Error rendering Login');
+  }
+  })
+
+
+  
+
 module.exports = router;
