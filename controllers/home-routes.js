@@ -25,9 +25,9 @@ router.get('/', async (req, res) => {
 // GET one food
 router.get('/food/:id', async (req, res) => {
     // If the user is not logged in, redirect the user to the login page
-    if (!req.session.loggedIn) {
+   /* if (!req.session.loggedIn) {
       res.redirect('/login');
-    } else {
+    } else { */
       // If the user is logged in, allow them to view the painting
       try {
         const dbFoodData = await Food.findByPk(req.params.id);
@@ -39,7 +39,7 @@ router.get('/food/:id', async (req, res) => {
         console.log(err);
         res.status(500).json(err);
       }
-    }
+    //}
   });
 
 router.post('/', (req, res) => {
