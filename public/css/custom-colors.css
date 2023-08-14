@@ -1,0 +1,42 @@
+:root {
+  --peach: #fcdeaf;
+  --light-peach: #fff2de;
+  --almost-black: #161713;
+  --burnt-orange: #e63f13;
+  --tangerine: #ea9d42;
+  --royal-blue: #2c2ed8;
+  --taupe: #d1ae98;
+  --grayish: #7d7f7a;
+}
+
+.bg-peach {
+  background-color: var(--peach);
+}
+
+.bg-light-peach {
+  background-color: var(--light-peach);
+}
+
+.bg-almost-black {
+  background-color: var(--almost-black);
+}
+
+.bg-burnt-orange {
+  background-color: var(--burnt-orange);
+}
+
+.bg-tangerine {
+  background-color: var(--tangerine);
+}
+
+.bg-royal-blue {
+  background-color: var(--royal-blue);
+}
+
+.bg-taupe {
+  background-color: var(--taupe);
+}
+
+.bg-grayish {
+  background-color: var(--grayish);
+}
