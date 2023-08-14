@@ -1,4 +1,13 @@
-{{#each foods as |food|}}
+<main>
+  <div class="left-sidebar">
+    {{!-- Sidebar content goes here  --}}
+  </div>
+
+  <div class="grid-container">
+    <div class="row">
+      {{#each foods as |food|}}
 {{> recipeCard}}
 {{/each}}
-
+    </div>
+  </div>
+  </main>
