@@ -1,9 +1,9 @@
 const sequelize = require("../config/connection");
 const seedFood = require("./foodData");
 
-const { User } = require('../models');
+const { User } = require("../model");
 
-const userData = require('./userData.json');
+const userData = require("./userData.json");
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
