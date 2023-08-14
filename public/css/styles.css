@@ -30,3 +30,36 @@
 main {
   margin-top: 9rem;
 }
+
+/* SemiBold Text */
+.semibold {
+  font-weight: 500;
+}
+
+/* Inverted Success Button */
+.inverted-btn {
+  display: inline-block;
+  border: 1.5px solid #198754;
+  background-color: transparent;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.inverted-btn:hover {
+  background-color: #198754;
+  color: #fff;
+}
+
+/* Horizontal Line */
+.divider {
+  border: none;
+        border-top: 1px solid #ccc; 
+        margin: 1rem 0;
+    }
+
+.deleteBtn {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}

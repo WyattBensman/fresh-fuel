@@ -1,19 +1,17 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
 
-    // Ensure username & password inputs have correct IDs
     const username = document.querySelector('#usernameLogin').value.trim();
     const password = document.querySelector('#passwordLogin').value.trim();
 
     if (username && password) {
-        // Route Needs Confirmed
+ 
         const response = await fetch('/api/users/login', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
             headers: { 'Content-Type': 'application/json' },
         });
 
-        // Make sure this is getting sent to the correct place
         if (response.ok) {
             document.location.replace('/');
         } else {
@@ -23,6 +21,5 @@ const loginFormHandler = async (event) => {
 };
 
 document
-    // Ensure Form has #loginForm ID
-    .querySelector('#loginForm')
+    .querySelector('.loginForm')
     .addEventListener('submit', loginFormHandler);
