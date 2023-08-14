@@ -2,6 +2,11 @@
   {
     "name": "user",
     "email": "user@hemail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "created_recipes": [
+      {
+
+      }
+    ]
   }
 ]

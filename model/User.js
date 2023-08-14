@@ -35,6 +35,12 @@ User.init(
         len: [6],
       },
     },
+    created_recipe: {
+
+    },
+    liked_recipe: {
+      
+    }
   },
   {
     hooks: {
