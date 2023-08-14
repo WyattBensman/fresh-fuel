@@ -1,0 +1,67 @@
+<div class="container mt-5">
+    <h2 class="text-center">Assemble & share <i>your</i> perfect dish!</h2>
+    <div class="row flex justify-content-center">
+        <form class="col-6">
+
+            <div class="divider"></div>
+
+            <div class="row">
+                <!-- Dish Name -->
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="dishTitle" class="form-label semibold">Dish Name</label>
+                        <input type="text" class="form-control" id="dishTitle" aria-describedby="dishTitle" />
+                    </div>
+                </div>
+
+                <!-- Image Upload -->
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="imgUpload" class="form-label semibold">Upload Image</label>
+                        <input type="file" class="form-control" id="dishImg" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ingredients -->
+            <div class="mb-3">
+                <label for="ingredients" class="form-label semibold">Ingredients</label>
+                <div class="ingredientsContainer">
+                    <input type="text" class="form-control ingredient" id="ingredient" />
+                </div>
+                <button id="addIngredient" class="btn inverted-btn mt-2">
+                    Add Ingredient
+                </button>
+            </div>
+
+            <!-- Instructions -->
+            <div class="mb-3">
+                <label for="Instructions" class="form-label semibold">Instructions</label>
+                <div class="instructionsContainer">
+                    <input type="text" class="form-control instruction" id="instruction" />
+                </div>
+                <button id="addInstruction" class="btn inverted-btn mt-2">
+                    Add Step
+                </button>
+            </div>
+
+            <!-- Cook Time -->
+            <div class="mb-3">
+                <label for="cookTime" class="form-label semibold">Cook Time</label>
+                <div class="d-flex align-items-center">
+                    <input type="text" class="form-control" style="width: 48px;" id="cookTime"
+                        aria-describedby="cookTime" />
+                    <p class="mb-0 ms-2"><i>in minutes</i></p>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-flex justify-content-center">
+                <button type="submit" style="width: 50%;" class="btn btn-success">Create Dish</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<script src="../public/js/createRecipe.js"></script>
