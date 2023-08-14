@@ -1,6 +1,5 @@
-{{#each foods as |food|}}
 <div>
-  <h1>{{food.food_name}}</h1>
+  <h1 id="food-title">{{food.food_name}}</h1>
   <!--<p>{{food.ingredients}}</p>-->
   {{#each food.ingredients}}
   <p>{{@key}}. {{this}}</p>
@@ -10,4 +9,3 @@
   <p>{{@key}}. {{this}}</p>
   {{/each}}
 </div>
-{{/each}}

@@ -24,8 +24,12 @@ Food.init(
       allowNull: false,
     },
     cook_time: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    },
+    image: {
+    type: DataTypes.BLOB,
+    allowNull: false
     }
 },
 {
