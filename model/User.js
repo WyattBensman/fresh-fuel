@@ -35,11 +35,13 @@ User.init(
         len: [6],
       },
     },
-    created_recipe: {
-
+    created_recipes: {
+      type: DataTypes.JSON, 
+      allowNull: false,
     },
-    liked_recipe: {
-      
+    liked_recipes: {
+      type: DataTypes.JSON, 
+      allowNull: false,
     }
   },
   {
