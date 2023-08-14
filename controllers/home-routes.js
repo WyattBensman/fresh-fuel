@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
 });
 
 // GET one food
-router.get('/food/:id', async (req, res) => {
+router.get('/recipes/:id', async (req, res) => {
     // If the user is not logged in, redirect the user to the login page
    /* if (!req.session.loggedIn) {
       res.redirect('/login');
@@ -34,7 +34,9 @@ router.get('/food/:id', async (req, res) => {
   
         const food = dbFoodData.get({ plain: true });
   
-        res.render('food-details', { food, loggedIn: req.session.loggedIn });
+        res.render('food-details', { food, 
+            //loggedIn: req.session.loggedIn 
+        });
       } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -49,8 +51,8 @@ router.post('/', (req, res) => {
       food_name: req.body.food_name,
       ingredients: req.body.ingredients,
       instructions: req.body.instructions,
-      cook_time: req.body.cook_time,
-      image: req.body.image
+    //   cook_time: req.body.cook_time,
+    //   image: req.body.image
     })
       .then((newMeal) => {
         // Send the newly created row as a JSON object

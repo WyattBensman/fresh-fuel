@@ -23,14 +23,14 @@ Food.init(
       type: DataTypes.JSON, // Use JSONB for storing an array of instructions
       allowNull: false,
     },
-    cook_time: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-    image: {
-        type: DataTypes.BLOB,
-        allowNull: false
-    }
+    // cook_time: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false,
+    // },
+    // image: {
+    //     type: DataTypes.BLOB,
+    //     allowNull: false
+    // }
 
 },
 {
