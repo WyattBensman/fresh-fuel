@@ -30,7 +30,9 @@
             </div>
             <!-- CREATED CARD -->
             <div class="col-9 d-flex flex-row flex-wrap yourRecipesContainer">
-                <!-- NEED TO ADD A FOREACH FOR PROFILE RECIPE CARD -->
+                {{#each userRecipes}}
+                {{> recipeProfileCard}}
+                {{/each}}
             </div>
         </div>
         <div class="row mt-5">
