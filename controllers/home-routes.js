@@ -75,6 +75,15 @@ router.post('/', (req, res) => {
   }
   })
 
+    router.get('/create-recipe', (req, res) => {
+    try {
+      res.render('createRecipe');
+  } catch (error) {
+      console.error(error);
+      res.status(500).send('Error rendering Login');
+  }
+  })
+
 
   
 
