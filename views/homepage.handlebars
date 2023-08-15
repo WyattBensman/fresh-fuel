@@ -1,6 +1,6 @@
 <main class="container-fluid pt-5">
 
-        <div class="row">
+        <div class="row ">
           
             <div class="col-md-3 bg-taupe sidebar">
             <h4 class="fw-bold pb-3 border-bottom pt-4">Filter Results</h4>
@@ -63,13 +63,13 @@
 
           
             <div class="col-md-9">
-                <div class="grid-container">
-                    <div class="justify-content-evenly row">
+                <div class="row justify-content-start">
+                    
                         
                         {{#each foods as |food|}}
                         {{> recipeCard}}
                         {{/each}}
-                    </div>
+                    
                 </div>
             </div>
         </div>
