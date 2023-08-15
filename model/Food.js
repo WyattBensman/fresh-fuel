@@ -15,6 +15,10 @@ Food.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    cooktime: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     ingredients: {
       type: DataTypes.JSON, // Use JSONB for storing an array of ingredients
       allowNull: false,

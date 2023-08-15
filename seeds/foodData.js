@@ -4,6 +4,7 @@ const fooddata = [
   {
     id: 1,
     food_name: "Grilled Chicken Salad",
+    author_id: "",
     ingredients: [
       "Boneless, skinless chicken breasts",
       "Mixed salad greens",
@@ -20,10 +21,12 @@ const fooddata = [
       "3. Slice the grilled chicken and place it on top of the salad.",
       "4. Drizzle with olive oil and lemon juice. Toss to combine. Enjoy!",
     ],
+    cooktime: "30 min",
   },
   {
     id: 2,
     food_name: "Quinoa Stir-Fry",
+    author_id: "",
     ingredients: [
       "Quinoa",
       "Assorted vegetables (bell peppers, broccoli, carrots, snap peas, etc.)",
@@ -41,10 +44,12 @@ const fooddata = [
       "4. If using tofu or chicken, add and cook until heated through.",
       "5. Stir in cooked quinoa, soy sauce, and sesame seeds. Mix well and serve.",
     ],
+    cooktime: "30 min",
   },
   {
     id: 3,
     food_name: "Greek Yogurt Parfait",
+    author_id: "",
     ingredients: [
       "Greek yogurt",
       "Mixed berries (strawberries, blueberries, raspberries)",
@@ -59,10 +64,12 @@ const fooddata = [
       "3. Repeat the layers as desired.",
       "4. Top with chia seeds and more berries. Enjoy your parfait!",
     ],
+    cooktime: "30 min",
   },
   {
     id: 4,
     food_name: "Oven-Roasted Vegetables",
+    author_id: "",
     ingredients: [
       "Assorted vegetables (zucchini, bell peppers, carrots, broccoli, etc.)",
       "Olive oil",
@@ -77,10 +84,12 @@ const fooddata = [
       "4. Spread the vegetables on a baking sheet in a single layer.",
       "5. Roast in the oven for 20-25 minutes, stirring occasionally, until tender and slightly caramelized. Serve as a side dish or over quinoa.",
     ],
+    cooktime: "30 min",
   },
   {
     id: 5,
     food_name: "Black Bean and Avocado Wrap",
+    author_id: "",
     ingredients: [
       "Whole wheat tortilla",
       "Canned black beans (rinsed and drained)",
@@ -99,10 +108,12 @@ const fooddata = [
       "4. Add the remaining whole black beans.",
       "5. Roll up the tortilla, tuck in the sides, and enjoy your flavorful wrap!",
     ],
+    cooktime: "30 min",
   },
   {
     id: 6,
     food_name: "Salmon and Asparagus Foil Pack",
+    author_id: "",
     ingredients: [
       "Salmon fillet",
       "Asparagus spears",
@@ -119,10 +130,12 @@ const fooddata = [
       "4. Drizzle with olive oil, minced garlic, chopped dill, salt, and pepper.",
       "5. Seal the foil packet and bake for 15-20 minutes, until salmon is cooked through and asparagus is tender.",
     ],
+    cooktime: "30 min",
   },
   {
     id: 7,
     food_name: "Mediterranean Chickpea Salad",
+    author_id: "",
     ingredients: [
       "Canned chickpeas (rinsed and drained)",
       "Cucumber",
@@ -141,10 +154,12 @@ const fooddata = [
       "2. In a small bowl, whisk together olive oil, lemon juice, dried oregano, salt, and pepper.",
       "3. Pour the dressing over the salad and toss to combine. Serve as a refreshing Mediterranean dish.",
     ],
+    cooktime: "30 min",
   },
   {
     id: 8,
     food_name: "Berry Spinach Smoothie",
+    author_id: "",
     ingredients: [
       "Fresh spinach leaves",
       "Mixed berries (strawberries, blueberries, raspberries)",
@@ -158,10 +173,12 @@ const fooddata = [
       "2. Blend until smooth and creamy. Adjust sweetness and consistency as needed by adding more honey, milk, or yogurt.",
       "3. Pour into a glass and enjoy your nutritious and vibrant smoothie!",
     ],
+    cooktime: "30 min",
   },
   {
     id: 9,
     food_name: "Veggie Omelette",
+    author_id: "",
     ingredients: [
       "Eggs",
       "Bell peppers (diced)",
@@ -182,10 +199,12 @@ const fooddata = [
       "7. Carefully fold the other half over the cheese. Cook until eggs are fully set.",
       "8. Slide the omelette onto a plate and enjoy your protein-packed breakfast!",
     ],
+    cooktime: "30 min",
   },
   {
     id: 10,
     food_name: "Roasted Sweet Potato Fries",
+    author_id: "",
     ingredients: [
       "Sweet potatoes (peeled and cut into fries)",
       "Olive oil",
@@ -200,10 +219,12 @@ const fooddata = [
       "4. Roast in the oven for 20-25 minutes, turning halfway through, until crispy and golden.",
       "5. Serve as a delicious and healthier alternative to regular fries.",
     ],
+    cooktime: "30 min",
   },
   {
     id: 11,
     food_name: "Berry Chia Pudding",
+    author_id: "",
     ingredients: [
       "Chia seeds",
       "Almond milk",
@@ -217,10 +238,12 @@ const fooddata = [
       "3. Refrigerate for a few hours or overnight, allowing the chia seeds to absorb the liquid and create a pudding-like texture.",
       "4. Before serving, layer the chia pudding with mixed berries in a glass. Enjoy a nutritious and satisfying dessert or breakfast!",
     ],
+    cooktime: "30 min",
   },
   {
     id: 12,
     food_name: "Turkey and Avocado Wrap",
+    author_id: "",
     ingredients: [
       "Whole wheat tortilla",
       "Sliced turkey breast",
@@ -237,10 +260,12 @@ const fooddata = [
       "4. Season with salt and pepper.",
       "5. Roll up the tortilla, tuck in the sides, and secure with a toothpick if needed. Enjoy your protein-packed wrap!",
     ],
+    cooktime: "30 min",
   },
   {
     id: 13,
     food_name: "Cauliflower Fried Rice",
+    author_id: "",
     ingredients: [
       "Cauliflower (riced)",
       "Assorted vegetables (peas, carrots, corn, bell peppers)",
@@ -260,10 +285,12 @@ const fooddata = [
       "5. Season with soy sauce, salt, and pepper.",
       "6. Top with chopped green onions and a drizzle of sesame oil. Serve your flavorful cauliflower fried rice!",
     ],
+    cooktime: "30 min",
   },
   {
     id: 14,
     food_name: "Peanut Butter Banana Smoothie",
+    author_id: "",
     ingredients: [
       "Banana",
       "Natural peanut butter",
@@ -278,10 +305,12 @@ const fooddata = [
       "2. Blend until smooth and creamy.",
       "3. Pour into a glass and enjoy your protein-rich and satisfying smoothie!",
     ],
+    cooktime: "30 min",
   },
   {
     id: 15,
     food_name: "Rainbow Veggie Salad",
+    author_id: "",
     ingredients: [
       "Baby spinach",
       "Red bell pepper (sliced)",
@@ -298,10 +327,12 @@ const fooddata = [
       "2. Toss the salad with your choice of balsamic vinaigrette dressing.",
       "3. Serve as a vibrant and nutrient-packed meal or side dish.",
     ],
+    cooktime: "30 min",
   },
   {
     id: 16,
     food_name: "Lentil and Vegetable Soup",
+    author_id: "",
     ingredients: [
       "Brown lentils",
       "Assorted vegetables (carrots, celery, zucchini, etc.)",
@@ -319,10 +350,12 @@ const fooddata = [
       "4. Add herbs, salt, and pepper. Simmer until lentils and veggies are tender.",
       "5. Remove bay leaves and thyme stems before serving. Enjoy your hearty and nutritious soup!",
     ],
+    cooktime: "30 min",
   },
   {
     id: 17,
     food_name: "Oatmeal with Berries and Almonds",
+    author_id: "",
     ingredients: [
       "Old-fashioned oats",
       "Almond milk",
@@ -336,10 +369,12 @@ const fooddata = [
       "2. Once cooked, top with mixed berries, sliced almonds, a drizzle of honey or maple syrup, and a sprinkle of cinnamon.",
       "3. Stir and enjoy your warm and satisfying oatmeal bowl!",
     ],
+    cooktime: "30 min",
   },
   {
     id: 18,
     food_name: "Veggie and Hummus Wrap",
+    author_id: "",
     ingredients: [
       "Whole wheat tortilla",
       "Hummus",
@@ -358,10 +393,12 @@ const fooddata = [
       "4. Season with salt and pepper.",
       "5. Roll up the tortilla, tuck in the sides, and enjoy your flavorful and nutrient-packed wrap!",
     ],
+    cooktime: "30 min",
   },
   {
     id: 19,
     food_name: "Chickpea and Spinach Curry",
+    author_id: "",
     ingredients: [
       "Canned chickpeas (rinsed and drained)",
       "Fresh spinach leaves",
@@ -382,10 +419,12 @@ const fooddata = [
       "5. Finish with a squeeze of lemon juice and chopped cilantro.",
       "6. Serve with rice or naan for a delicious and satisfying curry!",
     ],
+    cooktime: "30 min",
   },
   {
     id: 20,
     food_name: "Cucumber Avocado Gazpacho",
+    author_id: "",
     ingredients: [
       "Cucumber (peeled and chopped)",
       "Avocado",
@@ -403,10 +442,12 @@ const fooddata = [
       "3. Season with lemon juice, chopped fresh parsley, salt, and pepper.",
       "4. Chill in the fridge before serving as a refreshing and nutritious cold soup.",
     ],
+    cooktime: "30 min",
   },
   {
     id: 21,
     food_name: "Veggie and Tofu Stir-Fry",
+    author_id: "",
     ingredients: [
       "Firm tofu (cubed)",
       "Assorted vegetables (broccoli, snap peas, bell peppers, etc.)",
@@ -426,10 +467,12 @@ const fooddata = [
       "6. Pour the soy sauce mixture over the stir-fry and cook until thickened.",
       "7. Serve over rice or noodles for a tasty and protein-rich meal!",
     ],
+    cooktime: "30 min",
   },
   {
     id: 22,
     food_name: "Berry Quinoa Parfait",
+    author_id: "",
     ingredients: [
       "Cooked quinoa",
       "Mixed berries (strawberries, blueberries, raspberries)",
@@ -445,6 +488,7 @@ const fooddata = [
       "4. Top with chopped nuts and fresh mint leaves.",
       "5. Enjoy a protein-packed and fruity quinoa parfait!",
     ],
+    cooktime: "30 min",
   },
 ];
 
