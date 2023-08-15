@@ -15,7 +15,7 @@ Food.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    cooktime: {
+    author_id: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -27,10 +27,10 @@ Food.init(
       type: DataTypes.JSON, // Use JSON for storing an array of instructions
       allowNull: false,
     },
-    // cook_time: {
-    // type: DataTypes.INTEGER,
-    // allowNull: false,
-    // },
+    cook_time: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    },
     // image: {
     // type: DataTypes.BLOB,
     // allowNull: false
