@@ -1,13 +1,79 @@
-<main>
-  <div class="left-sidebar">
-    {{!-- Sidebar content goes here  --}}
-  </div>
+<main class="container-fluid pt-5">
 
-  <div class="grid-container">
-    <div class="row">
-        {{#each foods as |food|}}
-        {{> recipeCard}}
-        {{/each}}
+        <div class="row">
+          
+            <div class="col-md-3 bg-taupe sidebar">
+            <h4 class="fw-bold pb-3 border-bottom pt-4">Filter Results</h4>
+<form id="filter-form" class="pt-3">
+    <div class="mb-4">
+        <label for="categories" class="form-label fw-bold text-uppercase small">Categories</label>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="Breakfast" id="breakfast">
+            <label class="form-check-label" for="breakfast">Breakfast</label>
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="Lunch" id="lunch">
+            <label class="form-check-label" for="lunch">Lunch</label>
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="Dinner" id="dinner">
+            <label class="form-check-label" for="dinner">Dinner</label>
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="Snacks" id="snacks">
+            <label class="form-check-label" for="snacks">Snacks</label>
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="Dessert" id="dessert">
+            <label class="form-check-label" for="dessert">Dessert</label>
+        </div>
     </div>
+
+    <div class="mb-4">
+        <label for="mealType" class="form-label fw-bold text-uppercase small">Meal Type</label>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="Salad" id="salad">
+            <label class="form-check-label" for="salad">Salad</label>
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="Soup" id="soup">
+            <label class="form-check-label" for="soup">Soup</label>
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="Vegetarian" id="vegetarian">
+            <label class="form-check-label" for="vegetarian">Vegetarian</label>
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="Vegan" id="vegan">
+            <label class="form-check-label" for="vegan">Vegan</label>
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="Seafood" id="seafood">
+            <label class="form-check-label" for="seafood">Seafood</label>
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="Chicken" id="chicken">
+            <label class="form-check-label" for="chicken">Chicken</label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-warning w-100">Apply Filters</button>
+</form>
+</form>
+            </div>
+
+          
+            <div class="col-md-9">
+                <div class="grid-container">
+                    <div class="justify-content-evenly row">
+                        
+                        {{#each foods as |food|}}
+                        {{> recipeCard}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+ </main>
   </div>
 </main>
