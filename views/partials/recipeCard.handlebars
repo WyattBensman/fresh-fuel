@@ -1,26 +1,3 @@
-
-<div class="container col-3 mx-1 my-3">
-  <div class="card" style="width: 18rem;">
-    <!-- Need Image Source -->
-    <img
-      src="../../greek-salmon-bowl.jpeg"
-      class="card-img-top"
-      style="height: 200px; width: 100%; object-fit: cover;"
-      alt="..."
-    />
-    <div class="card-body bg-taupe">
-      <!-- Need Title -->
-      <div class="row align-items-center">
-        <h5 class="card-title col-10">{{food.food_name}}</h5>
-        <i class="far fa-heart fa-lg col-2 text-danger"></i>
-        <!-- <i class="fas fa-heart fa-lg text-danger"></i> -->
-      </div>
-      <div class="row">
-        <div class="col-6 text-center">
-          <!-- Need cook time -->
-          <p class="mb-0"><b>{{food.cook_time}}</b></p>
-          <p>Cook Time</p>
-
 <div class="container">
     <div class="card" style="width: 18rem;">
         <!-- Need Image Source -->
@@ -49,18 +26,6 @@
                 {{!-- Brnigs you to recipe ID --}}
                 <a href="/food/{{id}}" class="btn btn-success">View Recipe</a>
             </div>
-
         </div>
-        <!-- Need to grab # of Ingredients [Ingredients.length] -->
-        <div class="col-6 text-center">
-          <p class="mb-0">{{food.ingredients.length}}</p>
-          <p>Ingredients</p>
-        </div>
-      </div>
-      <div class="text-center">
-        {{! Brnigs you to recipe ID }}
-        <a href="/recipes/:{{food.id}}" class="btn bg-warning">View Recipe</a>
-      </div>
     </div>
-  </div>
 </div>
