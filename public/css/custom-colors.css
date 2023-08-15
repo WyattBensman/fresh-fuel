@@ -40,3 +40,13 @@
 .bg-grayish {
   background-color: var(--grayish);
 }
+
+.charcoal-grey-7 {
+  background-color: #aeb6bf;
+  color: black;
+}
+
+.charcoal-grey-6 {
+  background-color: #95a5a6;
+  color: black; /* Adjusted for better contrast */
+}
