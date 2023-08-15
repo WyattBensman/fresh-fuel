@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const Food = require("../model/Food");
-console.log(Food);
 
 // GET all foods for homepage
 router.get("/", async (req, res) => {
