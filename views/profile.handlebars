@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/daaffae4b8.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/custom-colors.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-3 d-flex flex-column align-items-center mt-3">
+                <h2>Your Recipes</h2>
+                <div class="card px-3 flex" style="width: 13rem; height: 72px;">
+                    <div class="card-body">
+                        <div class="row">
+                            <a href="/create-dish" class="btn btn-success">Create Dish!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CREATED CARD -->
+            <div class="col-9 d-flex flex-row flex-wrap yourRecipesContainer">
+                {{#each userRecipes}}
+                {{> recipeProfileCard}}
+                {{/each}}
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-3 d-flex flex-column align-items-center mt-3">
+                <h2>Liked Recipes</h2>
+                <div class="card px-3 flex" style="width: 13rem; height: 72px;">
+                    <div class="card-body">
+                        <div class="row">
+                            <a href="/" class="btn btn-success">Explore Dishes!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- LIKED CARD -->
+            <div class="col-9 d-flex flex-row flex-wrap likedRecipesContainer">
+                <!-- NEED TO ADD A FOREACH FOR RECIPE CARD -->
+            </div>
+</body>
+
+</html>

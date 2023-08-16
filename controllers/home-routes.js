@@ -74,7 +74,41 @@ router.post('/', (req, res) => {
   }
   })
 
+    router.get('/create-recipe', (req, res) => {
+    try {
+      res.render('createRecipe');
+  } catch (error) {
+      console.error(error);
+      res.status(500).send('Error rendering Login');
+  }
+  })
 
-  
+  router.get('/profile', async (req, res) => {
+      try {
+
+        // Grabs current user ID
+        const userId = req.session.userId;
+
+        // Find all Recipes that the user created
+        const userRecipes = await Food.findAll({
+            where: {
+                author_id: userId
+            }
+        });
+
+        // Map Recipes to Objects
+        const allUserRecipes = userRecipes.map((recipe) =>
+            recipe.get({ plain: true })
+        );
+
+        res.render('profile', {
+            userRecipes: allUserRecipes,
+            loggedIn: req.session.loggedIn,
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+  });
 
 module.exports = router;
