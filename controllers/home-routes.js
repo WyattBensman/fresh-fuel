@@ -13,6 +13,7 @@ router.get("/", async (req, res) => {
     res.render("homepage", {
       foods,
     });
+    // res.json(foods);
     console.log(foods);
   } catch (err) {
     console.log(err);
@@ -21,7 +22,7 @@ router.get("/", async (req, res) => {
 });
 
 // GET one food
-router.get('/food/:id', async (req, res) => {
+router.get('/recipes/:id', async (req, res) => {
     // If the user is not logged in, redirect the user to the login page
     //if (!req.session.loggedIn) {
     //   res.redirect('/login');
@@ -33,9 +34,10 @@ router.get('/food/:id', async (req, res) => {
         const food = dbFoodData.get({ plain: true });
         console.log(food)
   
-        res.render('food-details', { food, 
-            //loggedIn: req.session.loggedIn 
-        });
+        // res.render('food-details', { food, 
+        //     //loggedIn: req.session.loggedIn 
+        // });
+        res.json(food);
       } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -83,6 +85,22 @@ router.post('/', (req, res) => {
       res.status(500).send('Error rendering Login');
   }
   })
+
+  router.get('/edit-recipe/:id', async(req, res) => {
+    try {
+        const dbFoodData = await Food.findByPk(req.params.id);
+  
+        const food = dbFoodData.get({ plain: true });
+        console.log(food)
+  
+        res.render('editRecipe', { food, 
+            //loggedIn: req.session.loggedIn 
+        });
+      } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+    });
 
 
   

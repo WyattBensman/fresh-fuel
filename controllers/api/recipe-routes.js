@@ -20,4 +20,26 @@ router.post('/', async (req, res) => {
     }
   });
 
+router.put('/:id', async (req, res) => {
+  try {
+    const dish = await Food.update(
+      {
+        food_name: req.body.food_name,
+        ingredients: req.body.ingredients,
+        instructions: req.body.instructions,
+        // img: req.body.img,
+        // cook_time: req.body.cookTime,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    res.status(200).json(dish);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
   module.exports = router;
