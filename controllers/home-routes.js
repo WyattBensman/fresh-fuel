@@ -13,7 +13,6 @@ router.get("/", async (req, res) => {
     res.render("homepage", {
       foods,
     });
-    console.log(foods);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
