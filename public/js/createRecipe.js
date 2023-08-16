@@ -1,17 +1,17 @@
 const createRecipeHandler = async (event) => {
   event.preventDefault();
-
+  console.log("submitting form!");
   const title = document.querySelector("#dishTitle").value.trim();
   const img = document.querySelector("#dishImg").value.trim();
   const ingredients = document.querySelector(".ingredient").value.trim();
   const instructions = document.querySelector("#recipeInstructions").value.trim();
   const cookTime = document.querySelector('#cookTime').value.trim();
 
-  if (title && img && ingredients && cookTime) {
+  if (title && ingredients) {
     // Route needs confirmed
     const response = await fetch("/api/recipes", {
       method: "POST",
-      body: JSON.stringify({ title, img, recipe, instructions }),
+      body: JSON.stringify({ title, img, ingredients, instructions, cookTime }),
       headers: { "Content-Type": "application/json" },
     });
 
