@@ -1,22 +1,22 @@
 <div>
-  <h1 class="text-center">{{food.food_name}}</h1>
-  <div class="d-flex">
+  <h1 class="text-center charcoal-grey-6 ">{{food.food_name}}</h1>
+  <div class="d-flex ">
     <img src="/images/greek-salmon-bowl.jpeg" 
-    class="mx-auto justify-content-center img-thumbnail "
+    class="mx-auto justify-content-center img-thumbnail bg-light-peach  "
     style="height: auto; width: 50%;">
   </div>
 
   <h2>Ingredients</h2>
   {{#each food.ingredients}}
-  <ul class="list-group list-group-light">
-    <li class="list-group-item px-3 border-0 rounded-3 list-group-item-info mb-2">{{@key}}. {{this}}</li>
+  <ul class="list-group list-group-light bg-light-peach ">
+    <li class="list-group-item px-3 border-0 rounded-3 list-group-item-info mb-2 charcoal-grey-6">{{@key}}. {{this}}</li>
   </ul>
   {{/each}}
 
  <h2>Instructions</h2>
 {{#each food.instructions}}
-<ul class="list-group list-group-light"></ul>
-  <li class="list-group-item px-3 border-0 rounded-3 list-group-item-warning mb-2">{{this}}</li>
+<ul class="list-group list-group-light bg-royal-blue "></ul>
+  <li class="list-group-item px-3 border-0 rounded-3 list-group-item mb-2 bg-light-peach  ">{{this}}</li>
 </ul>
 {{/each}}
 

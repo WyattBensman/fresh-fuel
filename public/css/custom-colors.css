@@ -50,3 +50,47 @@
   background-color: #95a5a6;
   color: black; /* Adjusted for better contrast */
 }
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+}
+
+.raleway {
+  font-family: "Raleway", sans-serif;
+}
+
+.cormorant-garamond {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.futura-now {
+  font-family: "Futura Now", sans-serif;
+}
+
+.gilroy {
+  font-family: "Gilroy", sans-serif;
+}
+
+.avenir-next {
+  font-family: "Avenir Next", sans-serif;
+}
+
+.tt-norms-pro {
+  font-family: "TT Norms Pro", sans-serif;
+}
+
+.brandon-grotesque {
+  font-family: "Brandon Grotesque", sans-serif;
+}
