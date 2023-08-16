@@ -7,17 +7,16 @@
   </div>
 
   <h2>Ingredients</h2>
-  {{#each food.ingredients}}
-  <ul class="list-group list-group-light">
-    <li class="list-group-item px-3 border-0 rounded-3 list-group-item-info mb-2">{{@key}}. {{this}}</li>
-  </ul>
-  {{/each}}
 
- <h2>Instructions</h2>
-{{#each food.instructions}}
+  <ul class="list-group list-group-light">
+    <li class="list-group-item px-3 border-0 rounded-3 list-group-item-info mb-2">{{food.ingredients}}</li>
+  </ul>
+
+
+<h2>Instructions</h2>
 <ul class="list-group list-group-light"></ul>
-  <li class="list-group-item px-3 border-0 rounded-3 list-group-item-warning mb-2">{{this}}</li>
+  <li class="list-group-item px-3 border-0 rounded-3 list-group-item-warning mb-2">{{food.instructions}}</li>
 </ul>
-{{/each}}
+
 
 </div>

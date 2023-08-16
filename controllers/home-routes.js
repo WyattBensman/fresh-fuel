@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
       foods,
     });
     // res.json(foods);
-    console.log(foods);
+  
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -32,12 +32,12 @@ router.get('/recipes/:id', async (req, res) => {
         const dbFoodData = await Food.findByPk(req.params.id);
   
         const food = dbFoodData.get({ plain: true });
-        console.log(food)
+      
   
-        // res.render('food-details', { food, 
-        //     //loggedIn: req.session.loggedIn 
-        // });
-        res.json(food);
+        res.render('food-details', { food, 
+            //loggedIn: req.session.loggedIn 
+        });
+        // res.json(food);
       } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -91,7 +91,6 @@ router.post('/', (req, res) => {
         const dbFoodData = await Food.findByPk(req.params.id);
   
         const food = dbFoodData.get({ plain: true });
-        console.log(food)
   
         res.render('editRecipe', { food, 
             //loggedIn: req.session.loggedIn 

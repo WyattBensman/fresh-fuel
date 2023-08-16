@@ -1,5 +1,5 @@
 async function editFormHandler(event){
-//const editFormHandler = async (event, postId) => {
+console.log("recipe successfully edited!")
     event.preventDefault();
 
     const title = document.querySelector('#dishTitle').value.trim();
@@ -11,7 +11,7 @@ async function editFormHandler(event){
         window.location.toString().split('/').length - 1
       ];
 
-   // if (title && content) {
+    if (title && recipe) {
         // Change Route
         const response = await fetch(`/api/recipes/${id}`, {
             method: 'PUT',
@@ -25,7 +25,7 @@ async function editFormHandler(event){
             alert('Failed to edit recipe.');
         }
    // }
-};
+}};
 document.querySelector('.edit-dish-form').addEventListener('submit', editFormHandler);
 
 // const deleteFormHandler = async (event, postId) => {

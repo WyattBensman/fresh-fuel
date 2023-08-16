@@ -1,8 +1,9 @@
 const router = require('express').Router();
-const Food = require('../../model/User');
+const { Food } = require('../../model');
 
 // CREATE New Recipe
 router.post('/', async (req, res) => {
+  console.log(req.body);
     try {
       const dbRecipeData = await Food.create({
         food_name: req.body.title,
@@ -21,6 +22,7 @@ router.post('/', async (req, res) => {
   });
 
 router.put('/:id', async (req, res) => {
+  console.log(req.body);
   try {
     const dish = await Food.update(
       {
@@ -38,6 +40,7 @@ router.put('/:id', async (req, res) => {
     );
     res.status(200).json(dish);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });

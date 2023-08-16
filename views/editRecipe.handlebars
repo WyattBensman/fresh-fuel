@@ -1,7 +1,7 @@
 <div class="container mt-5">
     <h2 class="text-center">Edit {{food.food_name}}</h2>
     <div class="row flex justify-content-center">
-        <form class="col-6 edit-food-form">
+        <form class="col-6 edit-dish-form">
 
             <div class="divider"></div>
 
@@ -27,9 +27,7 @@
             <div class="mb-3">
                 <label for="ingredients" class="form-label semibold">Ingredients</label>
                 <div class="ingredientsContainer">
-                    {{#each food.ingredients}}
-                    <input type="text" class="form-control" id="dishIngredients" aria-describedby="dishIngredients" value="{{@key}}. {{this}}">
-                    {{/each}}
+                    <input type="text" class="form-control" id="dishIngredients" aria-describedby="dishIngredients" value="{{food.ingredients}}">
                 </div>
             </div>
 
@@ -37,9 +35,7 @@
             <div class="mb-3">
                 <label for="Instructions" class="form-label semibold">Instructions</label>
                 <div class="instructionsContainer">
-                    {{#each food.instructions}}
-                    <input type="text" class="form-control instruction" id="dishInstruction" value="{{this}}"/>
-                    {{/each}}
+                    <input type="text" class="form-control instruction" id="dishInstruction" value="{{food.instructions}}"/>
                 </div>
             </div>
 
