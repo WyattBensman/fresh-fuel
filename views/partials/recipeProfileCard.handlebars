@@ -1,29 +1,33 @@
 <div class="card col-3 me-3 mt-3" style="width: 18rem;">
-    <!-- Need Image Source -->
-    <img src="../../greek-salmon-bowl.jpeg" class="card-img-top" style="height: 200px; width: 100%; object-fit: cover;"
-        alt="...">
-    <div class="card-body">
-        <!-- Need Title -->
-        <div class="row align-items-center">
-            <h5 class="card-title col-10">{{food.food_name}}</h5>
-            <i class="far fa-heart fa-lg col-2 text-danger"></i>
-            <!-- <i class="fas fa-heart fa-lg text-danger"></i> -->
-        </div>
-        <div class="row">
-            <div class="col-6 text-center">
-                <!-- Need cook time -->
-                <p class="mb-0"><b>{{food.cook_time}}</b></p>
-                <p>Cook Time</p>
-            </div>
-            <!-- Need to grab # of Ingredients [Ingredients.length] -->
-            <div class="col-6 text-center">
-                <p class="mb-0">{{food.ingredients.length}}</p>
-                <p>Ingredients</p>
-            </div>
-        </div>
-        <div class="text-center">
-            <!-- Needs sent to the edit Recipe Page -->
-            <a href="/" class="btn btn-success">Edit Recipe</a>
-        </div>
+  <!-- Need Image Source -->
+  <img
+    src="../../greek-salmon-bowl.jpeg"
+    class="card-img-top"
+    style="height: 200px; width: 100%; object-fit: cover;"
+    alt="..."
+  />
+  <div class="card-body">
+    <!-- Need Title -->
+    <div class="row align-items-center">
+      <h5 class="card-title col-10">{{food_name}}</h5>
+      <i class="far fa-heart fa-lg col-2 text-danger"></i>
+      <!-- <i class="fas fa-heart fa-lg text-danger"></i> -->
     </div>
+    <div class="row">
+      <div class="col-6 text-center">
+        <!-- Need cook time -->
+        <p class="mb-0"><b>{{cook_time}}</b></p>
+        <p>Cook Time</p>
+      </div>
+      <!-- Need to grab # of Ingredients [Ingredients.length] -->
+      <div class="col-6 text-center">
+        <p class="mb-0">{{ingredients.length}}</p>
+        <p>Ingredients</p>
+      </div>
+    </div>
+    <div class="text-center">
+      <!-- Needs sent to the edit Recipe Page -->
+      <a href="/" class="btn btn-success">Edit Recipe</a>
+    </div>
+  </div>
 </div>
