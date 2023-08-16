@@ -15,7 +15,6 @@ router.get("/", async (req, res) => {
       loggedIn: req.session.loggedIn,
     });
     // res.json(foods);
-  
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -24,28 +23,7 @@ router.get("/", async (req, res) => {
 
 // GET one food
 
-router.get('/recipes/:id', async (req, res) => {
-    // If the user is not logged in, redirect the user to the login page
-    //if (!req.session.loggedIn) {
-    //   res.redirect('/login');
-    // } else { 
-      // If the user is logged in, allow them to view the painting
-      try {
-        const dbFoodData = await Food.findByPk(req.params.id);
-  
-        const food = dbFoodData.get({ plain: true });
-      
-  
-        res.render('food-details', { food, 
-            //loggedIn: req.session.loggedIn 
-        });
-        // res.json(food);
-      } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-      }
-    })
-router.get("/food/:id", async (req, res) => {
+router.get("/recipes/:id", async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
   //if (!req.session.loggedIn) {
   //   res.redirect('/login');
@@ -55,13 +33,12 @@ router.get("/food/:id", async (req, res) => {
     const dbFoodData = await Food.findByPk(req.params.id);
 
     const food = dbFoodData.get({ plain: true });
-    console.log(food);
 
     res.render("food-details", {
       food,
       //loggedIn: req.session.loggedIn
-
     });
+    // res.json(food);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -115,6 +92,24 @@ router.get("/create-recipe", (req, res) => {
   }
 });
 
+// Edit Recipe Route Handler
+router.get("/edit-recipe/:id", async (req, res) => {
+  try {
+    const dbFoodData = await Food.findByPk(req.params.id);
+
+    const food = dbFoodData.get({ plain: true });
+
+    res.render("editRecipe", {
+      food,
+      // loggedIn: req.session.loggedIn
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error rendering Edit");
+  }
+});
+
+// User Profile Route Handler
 router.get("/profile", async (req, res) => {
   try {
     // Grabs current user ID
@@ -127,36 +122,18 @@ router.get("/profile", async (req, res) => {
       },
     });
 
-
-  router.get('/edit-recipe/:id', async(req, res) => {
-    try {
-        const dbFoodData = await Food.findByPk(req.params.id);
-  
-        const food = dbFoodData.get({ plain: true });
-  
-        res.render('editRecipe', { food, 
-            //loggedIn: req.session.loggedIn 
-        });
-      } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-      }
-    });
-
-
     // Map Recipes to Objects
     const allUserRecipes = userRecipes.map((recipe) =>
       recipe.get({ plain: true })
     );
 
-
     res.render("profile", {
       userRecipes: allUserRecipes,
       loggedIn: req.session.loggedIn,
     });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error rendering Profile");
   }
 });
 
