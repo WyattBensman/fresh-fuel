@@ -1,27 +1,46 @@
 <div class="container mt-5">
-    <div class="border p-8 w-50 mx-auto">
-        <header class="mx-8 py-4 border-b">
-            <h2 class="text-center mx-3">Join a healthy community & start focusing on <i>your</i> health today!</h2>
-        </header>
-        <section class="my-4 mx-8">
-            <h3 class="h3 fw-bold mx-3 mb-4">Sign up</h3>
-            <form class="signupForm">
-                <div class="mb-3 mx-3">
-                    <label for="usernameLogin" class="form-label h5 mb-2">Username</label>
-                    <input type="text" id="usernameSignup" class="form-control py-1" name="username">
-                </div>
-                <div class="mb-3 mx-3">
-                    <label for="passwordSignup" class="form-label h5 mb-2">Password</label>
-                    <input type="password" id="passwordSignup" class="form-control py-1" name="password">
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-success mt-4 w-50" type="submit">Sign up!</button>
-                </div>
-            </form>
-            <!-- Redirects User to Login Page -->
-            <a href="/signup" class="d-block text-center mt-1">Already a member? Login!</a>
-        </section>
-    </div>
+  <div class="border p-8 w-50 mx-auto">
+    <header class="mx-8 py-4 border-b">
+      <h2 class="text-center mx-3">Join a healthy community & start focusing on
+        <i>your</i>
+        health today!</h2>
+    </header>
+    <section class="my-4 mx-8">
+      <h3 class="h3 fw-bold mx-3 mb-4">Sign up</h3>
+      {{! Form Start }}
+      <form class="signupForm">
+        <div class="mb-3 mx-3">
+          <label for="usernameLogin" class="form-label h5 mb-2">Username</label>
+          {{! Username Value }}
+          <input
+            type="text"
+            id="usernameSignup"
+            class="form-control py-1"
+            name="username"
+          />
+        </div>
+        <div class="mb-3 mx-3">
+          <label
+            for="passwordSignup"
+            class="form-label h5 mb-2"
+          >Password</label>
+          {{! Password Value }}
+          <input
+            type="password"
+            id="passwordSignup"
+            class="form-control py-1"
+            name="password"
+          />
+        </div>
+        <div class="text-center">
+          <button class="btn btn-success mt-4 w-50" type="submit">Sign up!</button>
+        </div>
+      </form>
+      <!-- Redirects User to Login Page -->
+      <a href="/signup" class="d-block text-center mt-1">Already a member?
+        Login!</a>
+    </section>
+  </div>
 </div>
 
-<script src="../public/js/signup.js"></script>
+<script src="/js/signup.js"></script>
