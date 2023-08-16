@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,42 +21,21 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="/profile">Profile</a>
           </li>
+          {{#if loggedIn}}
           <li class="nav-item">
-            <a class="nav-link" href="#">Profile</a>
+            <a class="nav-link"><button id="logout">Logout</button></a>
           </li>
+          {{else}}
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="/login">Login</a>
           </li>
+          {{/if}}
         </ul>
-
-  <body class="charcoal-grey-6">
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-light-peach custom-navbar"
-    >
-      <div class="container">
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </nav>
 
   {{{body}}}
@@ -67,6 +47,7 @@
   <script src=“https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js”
     integrity=“sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa”
     crossorigin=“anonymous”></script> --}}
+<script src="/js/logout.js"></script>
 </body>
 
 </html>
