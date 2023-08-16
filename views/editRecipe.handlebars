@@ -1,7 +1,7 @@
 <div class="container mt-5">
-    <h2 class="text-center">Assemble & share <i>your</i> perfect dish!</h2>
+    <h2 class="text-center">Edit {{food.food_name}}</h2>
     <div class="row flex justify-content-center">
-        <form class="col-6 createRecipeForm">
+        <form class="col-6 edit-dish-form">
 
             <div class="divider"></div>
 
@@ -10,7 +10,7 @@
                 <div class="col-6">
                     <div class="mb-3">
                         <label for="dishTitle" class="form-label semibold">Dish Name</label>
-                        <input type="text" class="form-control" id="dishTitle" aria-describedby="dishTitle" />
+                        <input type="text" class="form-control" id="dishTitle" aria-describedby="dishTitle" value="{{food.food_name}}"/>
                     </div>
                 </div>
 
@@ -27,22 +27,16 @@
             <div class="mb-3">
                 <label for="ingredients" class="form-label semibold">Ingredients</label>
                 <div class="ingredientsContainer">
-                    <input type="text" class="form-control ingredient" id="ingredient" />
+                    <input type="text" class="form-control" id="dishIngredients" aria-describedby="dishIngredients" value="{{food.ingredients}}">
                 </div>
-                <button id="addIngredient" class="btn inverted-btn mt-2">
-                    Add Ingredient
-                </button>
             </div>
 
             <!-- Instructions -->
             <div class="mb-3">
                 <label for="Instructions" class="form-label semibold">Instructions</label>
                 <div class="instructionsContainer">
-                    <input type="text" class="form-control instruction" id="recipeInstructions" />
+                    <input type="text" class="form-control instruction" id="dishInstruction" value="{{food.instructions}}"/>
                 </div>
-                <button id="addInstruction" class="btn inverted-btn mt-2">
-                    Add Step
-                </button>
             </div>
 
             <!-- Cook Time -->
@@ -50,18 +44,20 @@
                 <label for="cookTime" class="form-label semibold">Cook Time</label>
                 <div class="d-flex align-items-center">
                     <input type="text" class="form-control" style="width: 48px;" id="cookTime"
-                        aria-describedby="cookTime" />
+                        aria-describedby="cookTime" value="{{food.cook_time}}"/>
                     <p class="mb-0 ms-2"><i>in minutes</i></p>
                 </div>
             </div>
 
             <!-- Submit Button -->
             <div class="d-flex justify-content-center">
-                <button type="submit" style="width: 50%;" class="btn btn-success">Create Dish</button>
+                <button value="Submit" type="submit" style="width: 50%;" class="btn btn-success">Submit</button>
+                {{!-- <button type="submit" style="width: 50%;" class="btn btn-success">Delete Dish</button> --}}
             </div>
 
         </form>
     </div>
 </div>
 
-<script src="/js/createRecipe.js"></script>
+<script src="/js/editRecipe.js"></script>
+

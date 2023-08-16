@@ -14,7 +14,8 @@ router.get("/", async (req, res) => {
       foods,
       loggedIn: req.session.loggedIn,
     });
-    console.log(foods);
+    // res.json(foods);
+  
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -22,6 +23,28 @@ router.get("/", async (req, res) => {
 });
 
 // GET one food
+
+router.get('/recipes/:id', async (req, res) => {
+    // If the user is not logged in, redirect the user to the login page
+    //if (!req.session.loggedIn) {
+    //   res.redirect('/login');
+    // } else { 
+      // If the user is logged in, allow them to view the painting
+      try {
+        const dbFoodData = await Food.findByPk(req.params.id);
+  
+        const food = dbFoodData.get({ plain: true });
+      
+  
+        res.render('food-details', { food, 
+            //loggedIn: req.session.loggedIn 
+        });
+        // res.json(food);
+      } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+
 router.get("/food/:id", async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
   //if (!req.session.loggedIn) {
@@ -37,6 +60,7 @@ router.get("/food/:id", async (req, res) => {
     res.render("food-details", {
       food,
       //loggedIn: req.session.loggedIn
+
     });
   } catch (err) {
     console.log(err);
@@ -103,10 +127,28 @@ router.get("/profile", async (req, res) => {
       },
     });
 
+
+  router.get('/edit-recipe/:id', async(req, res) => {
+    try {
+        const dbFoodData = await Food.findByPk(req.params.id);
+  
+        const food = dbFoodData.get({ plain: true });
+  
+        res.render('editRecipe', { food, 
+            //loggedIn: req.session.loggedIn 
+        });
+      } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+    });
+
+
     // Map Recipes to Objects
     const allUserRecipes = userRecipes.map((recipe) =>
       recipe.get({ plain: true })
     );
+
 
     res.render("profile", {
       userRecipes: allUserRecipes,
