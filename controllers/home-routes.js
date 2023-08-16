@@ -44,7 +44,7 @@ router.get('/recipes/:id', async (req, res) => {
         console.log(err);
         res.status(500).json(err);
       }
-    })
+    });
 router.get("/food/:id", async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
   //if (!req.session.loggedIn) {
