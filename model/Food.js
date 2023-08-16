@@ -31,16 +31,12 @@ Food.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    category: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
     // image: {
     // type: DataTypes.BLOB,
     // allowNull: false
     // }
-},
-{
+  },
+  {
     sequelize,
     freezeTableName: true,
     underscored: true,
