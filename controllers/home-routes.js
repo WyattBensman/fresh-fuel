@@ -85,7 +85,9 @@ router.get("/signup", (req, res) => {
 
 router.get("/create-recipe", (req, res) => {
   try {
-    res.render("createRecipe");
+    res.render("createRecipe", {
+      loggedIn: req.session.loggedIn,
+    });
   } catch (error) {
     console.error(error);
     res.status(500).send("Error rendering Login");
@@ -116,19 +118,19 @@ router.get("/profile", async (req, res) => {
     const userId = req.session.userId;
 
     // Find all Recipes that the user created
-    const userRecipes = await Food.findAll({
+    /* const userRecipes = await Food.findAll({
       where: {
         author_id: userId,
       },
-    });
+    }); */
 
     // Map Recipes to Objects
-    const allUserRecipes = userRecipes.map((recipe) =>
+    /* const allUserRecipes = userRecipes.map((recipe) =>
       recipe.get({ plain: true })
-    );
+    ); */
 
     res.render("profile", {
-      userRecipes: allUserRecipes,
+      // userRecipes: allUserRecipes,
       loggedIn: req.session.loggedIn,
     });
   } catch (error) {
