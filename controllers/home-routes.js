@@ -45,28 +45,6 @@ router.get("/recipes/:id", async (req, res) => {
   }
 });
 
-router.get("/food/:id", async (req, res) => {
-  // If the user is not logged in, redirect the user to the login page
-  //if (!req.session.loggedIn) {
-  //   res.redirect('/login');
-  // } else {
-  // If the user is logged in, allow them to view the painting
-  try {
-    const dbFoodData = await Food.findByPk(req.params.id);
-
-    const food = dbFoodData.get({ plain: true });
-    console.log(food);
-
-    res.render("food-details", {
-      food,
-      //loggedIn: req.session.loggedIn
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
 router.post("/", (req, res) => {
   // Use Sequelize's `create()` method to add a row to the table
   // Similar to `INSERT INTO` in plain SQL
